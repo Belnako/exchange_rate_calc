@@ -1,2 +1,2 @@
-# exchange_rate_calc
-Exchange Rate Calculator
+# Exchange Rate Calculator
+Using Fetch API and Json
