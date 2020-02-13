@@ -1,3 +1,9 @@
+@mixin querie {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
 :root {
     --primary-color: gold;
 }
@@ -11,7 +17,7 @@
 body {
     background-color: #292929;
     color: #fff;
-    background-image: linear-gradient(#3a3a3a, rgb(27, 27, 27));
+    background-image: linear-gradient(#3f3f3f, rgb(27, 27, 27));
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -20,16 +26,29 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
+    @include querie {
+        font-size: 12px;
+    }
+}
+
+input {
+    @include querie {
+        max-width: 250px;
+    }
 }
 
 i,
 h1 {
     color: var(--primary-color);
     margin: 20px;
+    font-size: 3em;
+    text-align: center;
 }
 
 p {
     text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 2em;
 }
 
 .btn {
@@ -103,8 +122,10 @@ button:focus {
     outline: 0;
 }
 
-@media (max-width: 600px) {
-    .currency input {
-        width: 200px;
+footer {
+    margin-top: 3em;
+
+    p {
+        font-size: 1.5em;
     }
 }
